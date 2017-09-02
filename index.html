@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Twitch TV Player</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <iframe id="player"
+    src="https://player.twitch.tv/?channel=twitch"
+    frameborder="0"
+    scrolling="no"
+    allowfullscreen="true">
+</iframe>
+<div class="advice">
+  <button onclick="$('.advice').css('display','none');">X</button>
+  <h1>To see the control bar, move the cursor to the bottom of the screen!</h1>
+</div>
+<div id="scrooling" class="menuBar">
+  <div class="filters">
+    <button id="allBtn" onclick="loadList('all');">All</button><br>
+    <button id="onlineBtn" onclick="loadList('online');">Online</button><br>
+    <button id="offlineBtn" onclick="loadList('offline');">Offline</button>
+      
+    </div>
+  <ul class="channelList">
+  </ul>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
